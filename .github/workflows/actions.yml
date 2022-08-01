@@ -38,8 +38,6 @@ jobs:
           path: data.txt
   download_artifacts:
     runs-on: ubuntu-latest
-  download_artifacts:
-    runs-on: ubuntu-latest
     steps:
       - name: download artfacts in different job
         uses: actions/download-artifact@v2
