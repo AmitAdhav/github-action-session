@@ -1,9 +1,8 @@
 # This is sample workflows file created for session
 name: first_work
-on:
+on: 
+  # run on all branches
   push: 
-    branches: 
-      - main
 jobs: 
   first_job:
     runs-on: ubuntu-latest
@@ -49,3 +48,12 @@ jobs:
     needs: 
       - installing_packages
       - running_script_from_code
+  deploy_on_production:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs:
+      - download_artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy on Production
+        run: | 
+          echo Running Production Deployment
