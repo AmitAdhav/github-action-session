@@ -1,9 +1,8 @@
 # This is sample workflows file created for session
 name: first_work
 on:
+# run on all branches
   push: 
-    branches: 
-      - main
 jobs: 
   first_job:
     runs-on: ubuntu-latest
