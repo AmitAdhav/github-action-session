@@ -36,7 +36,7 @@ jobs:
         with: 
           name: artifact
           path: data.txt
-            download_artifacts:
+  download_artifacts:
     runs-on: ubuntu-latest
   download_artifacts:
     runs-on: ubuntu-latest
